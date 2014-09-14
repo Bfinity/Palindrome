@@ -15,10 +15,11 @@ import java.util.Arrays;
 
 public class Palindrome {
     public static void main(String[] args){
+        String test = Palindrome.allLetters();
 
     }
 
-    public String allLetters(){
+    public static String allLetters(){
         String[] lettersOfAlphabet;
         boolean allLetters;
         Scanner userInput;
@@ -45,11 +46,26 @@ public class Palindrome {
                         break;
                     }
                 }
+                allLetters = true;
             }
 
         }
 
         return wordToCheck;
 
+    }
+
+    public static String (String wordToCheck)
+    {
+        String wordEntered, letToReverse, wordReversed;
+
+        wordEntered = wordToCheck;
+
+        for(int i = 0; i < wordEntered.length()-1; i++)
+        {
+            letToReverse = wordEntered.substring(i, i+1)
+        }
+
+        return wordReversed;
     }
 }
