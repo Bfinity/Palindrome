@@ -115,8 +115,8 @@ public class Palindrome {
         String originalWord, reversedWord, resultsYes, resultsNo;
         originalWord = wordOriginal;
         reversedWord = wordReversed;
-        resultsYes = "Awesome! You entered a Palindrome!";
-        resultsNo = "Well, that was a word, but not a palindrome.";
+        resultsYes = "Awesome! You entered a Palindrome!\n";
+        resultsNo = "Well, that was a word, but not a palindrome.\n";
 
         if(originalWord.equalsIgnoreCase(reversedWord))
         {
