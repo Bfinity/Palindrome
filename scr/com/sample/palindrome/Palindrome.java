@@ -22,7 +22,7 @@ public class Palindrome {
         userWordIn = new Scanner(System.in);
 
         System.out.println(welcome);
-        wordIn = userWordIn.nextLine();
+        wordIn = Palindrome.allLetters();
         wordToCheck = Palindrome.wordReversed(wordIn);
         Palindrome.palindromeChecker(wordIn, wordToCheck);
 
@@ -33,30 +33,40 @@ public class Palindrome {
         String[] lettersOfAlphabet;
         boolean allLetters;
         Scanner userInput;
-        String inputToCheck, eachLetterChecked, eachCharacter, wordToCheck;
+        String inputToCheck, eachLetterChecked, wordToCheck;
+        int j;
+
 
         lettersOfAlphabet = new String[]{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
         "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-        allLetters = false;
+        allLetters = true;
         wordToCheck = "";
         userInput = new Scanner(System.in);
+        j = 0;
 
-        while(!allLetters)
+
+        while(allLetters)
         {
             inputToCheck = userInput.nextLine();
             for (int i = 0; i < inputToCheck.length(); i++)
             {
                 eachLetterChecked = inputToCheck.substring(i, i+1);
-                for(int j = 0; j < lettersOfAlphabet.length; j++)
+                for(String let : lettersOfAlphabet)
                 {
-                    eachCharacter = lettersOfAlphabet[i];
-                    if(eachLetterChecked.equalsIgnoreCase(eachCharacter))
+                    if(eachLetterChecked.equalsIgnoreCase(let))
                     {
                         wordToCheck = wordToCheck + eachLetterChecked;
                         break;
                     }
+                    j++;
+                    if (j == 26 && !wordToCheck.equals(inputToCheck))
+                    {
+                        System.out.println("You entered something that was not a letter.");
+                        wordToCheck = "";
+                        allLetters = false;
+                    }
                 }
-                allLetters = true;
+
             }
 
         }
@@ -77,7 +87,7 @@ public class Palindrome {
 
         wordEntered = wordToCheck;
 
-        for(int i = 0; i < wordEntered.length()-1; i++)
+        for(int i = 0; i < wordEntered.length(); i++)
         {
             letToReverse = wordEntered.substring(i, i+1);
             wordReversed = letToReverse + wordReversed;
