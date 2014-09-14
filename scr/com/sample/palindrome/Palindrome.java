@@ -55,15 +55,22 @@ public class Palindrome {
 
     }
 
-    public static String (String wordToCheck)
+    /**
+     * This method will reverse the user entered word
+     * @param wordToCheck
+     */
+
+    public static String wordReversed (String wordToCheck)
     {
         String wordEntered, letToReverse, wordReversed;
+        wordReversed = "";
 
         wordEntered = wordToCheck;
 
         for(int i = 0; i < wordEntered.length()-1; i++)
         {
-            letToReverse = wordEntered.substring(i, i+1)
+            letToReverse = wordEntered.substring(i, i+1);
+            wordReversed = letToReverse + wordReversed;
         }
 
         return wordReversed;
