@@ -75,4 +75,9 @@ public class Palindrome {
 
         return wordReversed;
     }
+
+    public static String palindromeChecker (String wordOriginal, String wordReversed )
+    {
+        
+    }
 }
