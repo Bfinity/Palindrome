@@ -76,8 +76,22 @@ public class Palindrome {
         return wordReversed;
     }
 
-    public static String palindromeChecker (String wordOriginal, String wordReversed )
+    public static void palindromeChecker (String wordOriginal, String wordReversed )
     {
-        
+        String originalWord, reversedWord, resultsYes, resultsNo;
+        originalWord = wordOriginal;
+        reversedWord = wordReversed;
+        resultsYes = "Awesome! You entered a Palindrome!";
+        resultsNo = "Well, that was a word, but not a palindrome.";
+
+        if(originalWord.equalsIgnoreCase(reversedWord))
+        {
+            System.out.println(resultsYes);
+        }
+        else
+        {
+            System.out.println(resultsNo);
+        }
+
     }
 }
