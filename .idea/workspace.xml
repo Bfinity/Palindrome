@@ -26,8 +26,8 @@
       <file leaf-file-name="Palindrome.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scr/com/sample/palindrome/Palindrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19480519" vertical-offset="0" max-vertical-offset="693">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.3030303" vertical-offset="0" max-vertical-offset="693">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -268,6 +268,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5622289d-d0f8-40af-997c-cd78acb6ba6b" name="Default" comment="" />
@@ -326,8 +329,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scr/com/sample/palindrome/Palindrome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19480519" vertical-offset="0" max-vertical-offset="693">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.3030303" vertical-offset="0" max-vertical-offset="693">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
         </state>
       </provider>
