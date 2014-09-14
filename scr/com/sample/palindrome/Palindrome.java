@@ -18,7 +18,7 @@ public class Palindrome {
 
     }
 
-    public boolean allLetters(){
+    public String allLetters(){
         String[] lettersOfAlphabet;
         boolean allLetters;
         Scanner userInput;
@@ -49,7 +49,7 @@ public class Palindrome {
 
         }
 
-
+        return wordToCheck;
 
     }
 }
