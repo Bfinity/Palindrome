@@ -19,17 +19,33 @@ public class Palindrome {
     }
 
     public boolean allLetters(){
-        char[] lettersOfAlphabet;
+        String[] lettersOfAlphabet;
         boolean allLetters;
         Scanner userInput;
+        String inputToCheck, eachLetterChecked, eachCharacter, wordToCheck;
 
-        lettersOfAlphabet = new char[]{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-        'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        lettersOfAlphabet = new String[]{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
         allLetters = false;
+        wordToCheck = "";
         userInput = new Scanner(System.in);
 
         while(!allLetters)
         {
+            inputToCheck = userInput.nextLine();
+            for (int i = 0; i < inputToCheck.length(); i++)
+            {
+                eachLetterChecked = inputToCheck.substring(i, i+1);
+                for(int j = 0; j < lettersOfAlphabet.length; j++)
+                {
+                    eachCharacter = lettersOfAlphabet[i];
+                    if(eachLetterChecked.equalsIgnoreCase(eachCharacter))
+                    {
+                        wordToCheck = wordToCheck + eachLetterChecked;
+                        break;
+                    }
+                }
+            }
 
         }
 
