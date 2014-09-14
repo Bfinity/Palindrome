@@ -15,16 +15,19 @@ import java.util.Arrays;
 
 public class Palindrome {
     public static void main(String[] args){
-        String wordIn, welcome, wordToCheck;
+        String wordIn, wordOut, welcome, wordToCheck;
         boolean goodInput;
+        Scanner newWord;
 
         welcome = "Welcome! Please enter a word and I will tell if you it's a palindrome or not.";
+        newWord = new Scanner(System.in);
         goodInput = true;
 
         while(goodInput) {
             System.out.println(welcome);
-            wordIn = Palindrome.allLetters();
-            if(wordIn.equals("-1"))
+            wordIn = newWord.nextLine();
+            wordOut = Palindrome.allLetters(wordIn);
+            if(wordOut.equals("-1"))
             {
                 goodInput = false;
             }
@@ -38,7 +41,7 @@ public class Palindrome {
 
     }
 
-    public static String allLetters(){
+    public static String allLetters(String wordEntered){
         String[] lettersOfAlphabet;
         boolean allLetters;
         Scanner userInput;
@@ -51,12 +54,11 @@ public class Palindrome {
         allLetters = true;
         wordToCheck = "";
         userInput = new Scanner(System.in);
-        j = 0;
 
 
         while(allLetters)
         {
-            inputToCheck = userInput.nextLine();
+            inputToCheck = wordEntered;
             for (int i = 0; i < inputToCheck.length(); i++)
             {
                 eachLetterChecked = inputToCheck.substring(i, i+1);
@@ -67,17 +69,20 @@ public class Palindrome {
                         wordToCheck = wordToCheck + eachLetterChecked;
                         break;
                     }
-                    j++;
-                    if (j == 26 && wordToCheck.length()!=inputToCheck.length())
-                    {
-                        System.out.println("You entered something that was not a letter.");
-                        wordToCheck = "-1";
-                        allLetters = false;
-                    }
+
                 }
 
             }
-
+            if (wordToCheck.length()!=inputToCheck.length())
+            {
+                System.out.println("You entered something that was not a letter.");
+                wordToCheck = "-1";
+                allLetters = false;
+            }
+            else
+            {
+                allLetters = false;
+            }
         }
 
         return wordToCheck;
