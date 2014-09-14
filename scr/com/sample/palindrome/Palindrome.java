@@ -16,15 +16,24 @@ import java.util.Arrays;
 public class Palindrome {
     public static void main(String[] args){
         String wordIn, welcome, wordToCheck;
-        Scanner userWordIn;
+        boolean goodInput;
 
         welcome = "Welcome! Please enter a word and I will tell if you it's a palindrome or not.";
-        userWordIn = new Scanner(System.in);
+        goodInput = true;
 
-        System.out.println(welcome);
-        wordIn = Palindrome.allLetters();
-        wordToCheck = Palindrome.wordReversed(wordIn);
-        Palindrome.palindromeChecker(wordIn, wordToCheck);
+        while(goodInput) {
+            System.out.println(welcome);
+            wordIn = Palindrome.allLetters();
+            if(wordIn.equals("-1"))
+            {
+                goodInput = false;
+            }
+            else
+            {
+                wordToCheck = Palindrome.wordReversed(wordIn);
+                Palindrome.palindromeChecker(wordIn, wordToCheck);
+            }
+        }
 
 
     }
@@ -59,10 +68,10 @@ public class Palindrome {
                         break;
                     }
                     j++;
-                    if (j == 26 && !wordToCheck.equals(inputToCheck))
+                    if (j == 26 && wordToCheck.length()!=inputToCheck.length())
                     {
                         System.out.println("You entered something that was not a letter.");
-                        wordToCheck = "";
+                        wordToCheck = "-1";
                         allLetters = false;
                     }
                 }
