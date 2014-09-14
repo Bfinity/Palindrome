@@ -15,7 +15,17 @@ import java.util.Arrays;
 
 public class Palindrome {
     public static void main(String[] args){
-        String test = Palindrome.allLetters();
+        String wordIn, welcome, wordToCheck;
+        Scanner userWordIn;
+
+        welcome = "Welcome! Please enter a word and I will tell if you it's a palindrome or not.";
+        userWordIn = new Scanner(System.in);
+
+        System.out.println(welcome);
+        wordIn = userWordIn.nextLine();
+        wordToCheck = Palindrome.wordReversed(wordIn);
+        Palindrome.palindromeChecker(wordIn, wordToCheck);
+
 
     }
 
