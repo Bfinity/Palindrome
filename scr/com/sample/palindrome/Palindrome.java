@@ -10,6 +10,9 @@ package com.sample.palindrome;
  * results.
  */
 
+import java.util.Scanner;
+import java.util.Arrays;
+
 public class Palindrome {
     public static void main(String[] args){
 
