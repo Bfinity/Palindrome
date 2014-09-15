@@ -27,23 +27,22 @@ public class Palindrome {
         newWord = new Scanner(System.in);
         goodInput = true;
 
-        while(goodInput) { //A while loop controls the program, allowing a user to continue input until bad input is received.
-            System.out.println(welcome);
-            wordIn = newWord.nextLine();
-            wordOut = Palindrome.allLetters(wordIn); //This calls the method to check for bad user input.
-            if(wordOut.equals("-1"))
-            {
-                goodInput = false; //Once bad input is received the loop stops.
+            while (goodInput) { //A while loop controls the program, allowing a user to continue input until bad input is received.
+                System.out.println(welcome);
+                wordIn = newWord.nextLine();
+                wordOut = Palindrome.allLetters(wordIn); //This calls the method to check for bad user input.
+                if (wordOut.equals("-1")) {
+                    goodInput = false; //Once bad input is received the loop stops.
+                } else {
+                    wordToCheck = Palindrome.wordReversed(wordIn); //This calls the method to reverse the word.
+                    Palindrome.palindromeChecker(wordIn, wordToCheck); //This calls the method to check if the word entered is a palindrome.
+
+                }
             }
-            else
-            {
-                wordToCheck = Palindrome.wordReversed(wordIn); //This calls the method to reverse the word.
-                Palindrome.palindromeChecker(wordIn, wordToCheck); //This calls the method to see if the word is a palindrome.
-            }
-        }
 
 
     }
+
 
     /**
      * This method will check if the user has entered only letters.
@@ -79,13 +78,11 @@ public class Palindrome {
                         wordToCheck = wordToCheck + eachLetterChecked;
                         break;
                     }
-
                 }
-
             }
             if (wordToCheck.length()!=inputToCheck.length())
             {
-                System.out.println("You entered something that was not a letter.");
+                System.out.println("You entered something that was not a letter. I'm not playing anymore.");
                 wordToCheck = "-1";
                 allLetters = false;
             }
@@ -111,7 +108,7 @@ public class Palindrome {
 
         wordEntered = wordToCheck;
 
-        for(int i = 0; i < wordEntered.length(); i++)
+        for(int i = 0; i < wordEntered.length(); i++) //This loop reorders the word.
         {
             letToReverse = wordEntered.substring(i, i+1);
             wordReversed = letToReverse + wordReversed;
@@ -144,4 +141,5 @@ public class Palindrome {
         }
 
     }
+
 }
