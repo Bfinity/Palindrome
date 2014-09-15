@@ -13,6 +13,10 @@ package com.sample.palindrome;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * This is the main method that runs the program.
+ */
+
 public class Palindrome {
     public static void main(String[] args){
         String wordIn, wordOut, welcome, wordToCheck;
@@ -23,23 +27,29 @@ public class Palindrome {
         newWord = new Scanner(System.in);
         goodInput = true;
 
-        while(goodInput) {
+        while(goodInput) { //A while loop controls the program, allowing a user to continue input until bad input is received.
             System.out.println(welcome);
             wordIn = newWord.nextLine();
-            wordOut = Palindrome.allLetters(wordIn);
+            wordOut = Palindrome.allLetters(wordIn); //This calls the method to check for bad user input.
             if(wordOut.equals("-1"))
             {
-                goodInput = false;
+                goodInput = false; //Once bad input is received the loop stops.
             }
             else
             {
-                wordToCheck = Palindrome.wordReversed(wordIn);
-                Palindrome.palindromeChecker(wordIn, wordToCheck);
+                wordToCheck = Palindrome.wordReversed(wordIn); //This calls the method to reverse the word.
+                Palindrome.palindromeChecker(wordIn, wordToCheck); //This calls the method to see if the word is a palindrome.
             }
         }
 
 
     }
+
+    /**
+     * This method will check if the user has entered only letters.
+     * @param wordEntered
+     * @return string of word entered or a number that stops the main method from running.
+     */
 
     public static String allLetters(String wordEntered){
         String[] lettersOfAlphabet;
@@ -109,6 +119,12 @@ public class Palindrome {
 
         return wordReversed;
     }
+
+    /**
+     * This method checks to see if the word entered is a palindrome.
+     * @param wordOriginal
+     * @param wordReversed
+     */
 
     public static void palindromeChecker (String wordOriginal, String wordReversed )
     {
