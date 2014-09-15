@@ -59,7 +59,7 @@ public class Palindrome {
 
 
         lettersOfAlphabet = new String[]{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
-        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+        "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "};
         allLetters = true;
         wordToCheck = "";
         userInput = new Scanner(System.in);
@@ -75,6 +75,10 @@ public class Palindrome {
                 {
                     if(eachLetterChecked.equalsIgnoreCase(let))
                     {
+                        if(eachLetterChecked.equalsIgnoreCase(" "))
+                        {
+                             eachLetterChecked = "";
+                        }
                         wordToCheck = wordToCheck + eachLetterChecked;
                         break;
                     }
