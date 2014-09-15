@@ -26,8 +26,8 @@
       <file leaf-file-name="Palindrome.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scr/com/sample/palindrome/Palindrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.078947365" vertical-offset="1224" max-vertical-offset="2265">
-              <caret line="84" column="105" selection-start-line="84" selection-start-column="105" selection-end-line="84" selection-end-column="105" />
+            <state vertical-scroll-proportion="0.67105263" vertical-offset="39" max-vertical-offset="2265">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -369,8 +369,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scr/com/sample/palindrome/Palindrome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.078947365" vertical-offset="1224" max-vertical-offset="2265">
-          <caret line="84" column="105" selection-start-line="84" selection-start-column="105" selection-end-line="84" selection-end-column="105" />
+        <state vertical-scroll-proportion="0.67105263" vertical-offset="39" max-vertical-offset="2265">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
